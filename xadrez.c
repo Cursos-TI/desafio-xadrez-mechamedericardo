@@ -4,7 +4,7 @@ int main() {
 
     int i;
 
-    // ---------------- TORRE (for) ----------------
+    // -------- TORRE (for) --------
     printf("Movimento da Torre:\n");
 
     for (i = 0; i < 5; i++) {
@@ -12,7 +12,7 @@ int main() {
     }
 
 
-    // ---------------- BISPO (while) ----------------
+    // -------- BISPO (while) --------
     printf("\nMovimento do Bispo:\n");
 
     i = 0;
@@ -22,7 +22,7 @@ int main() {
     }
 
 
-    // ---------------- RAINHA (do-while) ----------------
+    // -------- RAINHA (do-while) --------
     printf("\nMovimento da Rainha:\n");
 
     i = 0;
@@ -31,6 +31,24 @@ int main() {
         i++;
     } while (i < 8);
 
+
+    // -------- CAVALO (loops aninhados) --------
+    printf("\nMovimento do Cavalo:\n");
+
+    // for → controla os 2 passos para baixo
+    for (i = 0; i < 2; i++) {
+
+        printf("Baixo\n");
+
+        // while → executa só uma vez para ir para a esquerda
+        if (i == 1) { // só no final do movimento
+            int j = 0;
+            while (j < 1) {
+                printf("Esquerda\n");
+                j++;
+            }
+        }
+    }
 
     return 0;
 }
